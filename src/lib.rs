@@ -57,7 +57,7 @@ impl PduDaemon {
         port: &str,
         delay: Option<u32>,
     ) -> Result<(), PduDaemonError> {
-        let mut url = self.build_url("on", hostname, port)?;
+        let mut url = self.build_url("reboot", hostname, port)?;
         if let Some(delay) = delay {
             url.query_pairs_mut()
                 .append_pair("delay", &delay.to_string());
