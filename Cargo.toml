@@ -1,6 +1,6 @@
 [package]
 name = "pdudaemon-client"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Sjoerd Simons <sjoerd@collabora.com>"]
 license = "MIT OR Apache-2.0"
@@ -10,7 +10,7 @@ repository = "https://github.com/sjoerdsimons/pdudaemon-client"
 readme = "README.md"
 
 [dependencies]
-reqwest = "0.11.22"
+reqwest = "0.12"
 thiserror = "1.0.40"
 url = "2.4.1"
 
