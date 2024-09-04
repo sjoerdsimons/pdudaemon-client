@@ -14,7 +14,7 @@ jobs:
       - name: Install build-depends
         run: sudo apt install -y protobuf-compiler libudev-dev
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.70.0
+      - uses: dtolnay/rust-toolchain@1.79.0
       - run: cargo test --all-targets --all-features
 
   fmt:
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.70.0
+      - uses: dtolnay/rust-toolchain@1.79.0
         with:
             components: rustfmt
       - run: cargo fmt --all --check
@@ -34,7 +34,7 @@ jobs:
       - name: Install build-depends
         run: sudo apt install -y protobuf-compiler libudev-dev
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.70.0
+      - uses: dtolnay/rust-toolchain@1.79.0
         with:
             components: clippy
       - run: cargo clippy --all-targets -- -D warnings
